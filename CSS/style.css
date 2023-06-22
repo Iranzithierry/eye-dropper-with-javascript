@@ -1,0 +1,84 @@
+@import url(font/Manrope/manrope.css);
+@import url(font/Nunito/nunito.css);
+@import url(font/Colfax/font.css);
+@import url(font/Splide/splide.css);
+@import url(font/Poppins/poppins.css);
+
+:root {
+  --body-color: #e3f2fd;
+
+  --font-color-white: #f5f5f5;
+  --hover-white: #e2eaf6;
+  --primary-white: #f5f4fd;
+
+  --font-color-black: #160822;
+  --primary-black: #11101d;
+  --black-hover: #1c2339;
+
+  --font-color-blue: #ffffff;
+  --primary-blue: #695cfe;
+  --blue-hover: #5d3be1;
+
+  --shadow: rgba(#131c31, 0.2) 0px 7px 29px 0px;
+  --transition: all 0.3s ease, color 0.3s ease;
+  --button-padding: 16px 20px;
+  --poppins: "Poppins", sans-serif;
+  --manrope: "Manrope", sans-serif;
+  --colfax: "ColfaxAi", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  font-family: var(--manrope);
+}
+
+body {
+  background-color: var(--body-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+button {
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-color: #5d3be1;
+  cursor: pointer;
+  border: 2px solid #5d3be1;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 16px;
+  transition: var(--transition);
+}
+button:hover {
+  background-color: #695cfe;
+  color: #fff;
+  /* transform: translate(2px, 2px) scale(1.11); */
+  border: 2px solid transparent;
+}
+.box, .circle{
+  height: 18px;
+  width: 400px;
+  animation: shimmer 1s linear infinite;
+  background-size: 400%;
+  background-image: linear-gradient(
+    to right, #f2f2f2 0%, #f2f2f2 30%,
+    #d9d9d9 45%, #d9d9d9 50%,
+    #f2f2f2 60%, #f2f2f2 100%
+  );
+}
+@keyframes shimmer {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
